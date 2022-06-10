@@ -3,7 +3,7 @@
 #include <map>
 #include "tstack.h"
 
-std::string infx2pstfx(std::string inf) {
+std::string infx2pstfx(std::string inpt) {
     TStack<char, 100> stack1;
     std::string res;
     int len = inpt.length();
@@ -66,10 +66,9 @@ std::string infx2pstfx(std::string inf) {
         if (!(i == len - 1)) out += " ";
     }
     return out;
-  return std::string("");
 }
 
-int eval(std::string pref) {
+int eval(std::string inpt) {
     TStack<int, 100> stack2;
     int len = inpt.length();
     for (int i = 0; i < len; i++) {
